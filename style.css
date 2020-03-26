@@ -13,6 +13,14 @@ ul {
   color: white;
   letter-spacing: 2px;
 }
+#particles-js {
+  height: 100%;
+  background: #1c2430;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
 /* @keyframes example {
   from {
     background: url(images/bakground.jpg) no-repeat center center fixed;
@@ -29,10 +37,11 @@ ul {
     background-size: cover;
   }
 } */
-
+.particles-js-canvas-el {
+  position: absolute;
+}
 html,
 body {
-  background: url(images/bakground.jpg) no-repeat center center fixed;
   height: 100%;
 }
 a {
@@ -42,7 +51,6 @@ a {
   color: red;
 }
 html {
-  background: url(images/bakground.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
