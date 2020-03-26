@@ -310,7 +310,7 @@ b {
     left: 0;
   }
   to {
-    left: 100%;
+    left: 95%;
   }
 }
 @-moz-keyframes moveX {
@@ -318,7 +318,7 @@ b {
     left: 0;
   }
   to {
-    left: 100%;
+    left: 95%;
   }
 }
 @-o-keyframes moveX {
@@ -326,7 +326,7 @@ b {
     left: 0;
   }
   to {
-    left: 100%;
+    left: 95%;
   }
 }
 @keyframes moveX {
@@ -334,7 +334,7 @@ b {
     left: 0;
   }
   to {
-    left: 100%;
+    left: 95%;
   }
 }
 @-webkit-keyframes moveY {
@@ -342,7 +342,7 @@ b {
     top: 0;
   }
   to {
-    top: 100%;
+    top: 95%;
   }
 }
 @-moz-keyframes moveY {
@@ -350,7 +350,7 @@ b {
     top: 0;
   }
   to {
-    top: 100%;
+    top: 95%;
   }
 }
 @-o-keyframes moveY {
@@ -358,7 +358,7 @@ b {
     top: 0;
   }
   to {
-    top: 100%;
+    top: 95%;
   }
 }
 @keyframes moveY {
@@ -366,6 +366,6 @@ b {
     top: 0;
   }
   to {
-    top: 100%;
+    top: 95%;
   }
 }
