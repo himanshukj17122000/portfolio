@@ -15,7 +15,8 @@ ul {
 }
 #particles-js {
   height: 100%;
-  background: #1c2430;
+  background-image: url("images/newBak.jpg");
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -360,6 +361,9 @@ b {
   to {
     top: 95%;
   }
+}
+.profileImage {
+  border-radius: 50%;
 }
 @keyframes moveY {
   from {
