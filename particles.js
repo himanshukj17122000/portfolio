@@ -320,31 +320,58 @@ var pJS = function (tag_id, params) {
     var velbase = {};
     switch (pJS.particles.move.direction) {
       case "top":
-        velbase = { x: 0, y: -1 };
+        velbase = {
+          x: 0,
+          y: -1
+        };
         break;
       case "top-right":
-        velbase = { x: 0.5, y: -0.5 };
+        velbase = {
+          x: 0.5,
+          y: -0.5
+        };
         break;
       case "right":
-        velbase = { x: 1, y: -0 };
+        velbase = {
+          x: 1,
+          y: -0
+        };
         break;
       case "bottom-right":
-        velbase = { x: 0.5, y: 0.5 };
+        velbase = {
+          x: 0.5,
+          y: 0.5
+        };
         break;
       case "bottom":
-        velbase = { x: 0, y: 1 };
+        velbase = {
+          x: 0,
+          y: 1
+        };
         break;
       case "bottom-left":
-        velbase = { x: -0.5, y: 1 };
+        velbase = {
+          x: -0.5,
+          y: 1
+        };
         break;
       case "left":
-        velbase = { x: -1, y: 0 };
+        velbase = {
+          x: -1,
+          y: 0
+        };
         break;
       case "top-left":
-        velbase = { x: -0.5, y: -0.5 };
+        velbase = {
+          x: -0.5,
+          y: -0.5
+        };
         break;
       default:
-        velbase = { x: 0, y: 0 };
+        velbase = {
+          x: 0,
+          y: 0
+        };
         break;
     }
 
@@ -702,8 +729,8 @@ var pJS = function (tag_id, params) {
       var opacity_line =
         pJS.particles.line_linked.opacity -
         dist /
-          (1 / pJS.particles.line_linked.opacity) /
-          pJS.particles.line_linked.distance;
+        (1 / pJS.particles.line_linked.opacity) /
+        pJS.particles.line_linked.distance;
 
       if (opacity_line > 0) {
         /* style */
@@ -852,7 +879,7 @@ var pJS = function (tag_id, params) {
                 p.opacity -
                 (pJS.particles.opacity.value -
                   pJS.interactivity.modes.bubble.opacity) *
-                  ratio;
+                ratio;
               if (
                 opacity < p.opacity &&
                 opacity >= pJS.interactivity.modes.bubble.opacity
@@ -880,7 +907,7 @@ var pJS = function (tag_id, params) {
           dy_mouse = p.y - pJS.interactivity.mouse.click_pos_y,
           dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse),
           time_spent =
-            (new Date().getTime() - pJS.interactivity.mouse.click_time) / 1000;
+          (new Date().getTime() - pJS.interactivity.mouse.click_time) / 1000;
 
         if (time_spent > pJS.interactivity.modes.bubble.duration) {
           pJS.tmp.bubble_duration_end = true;
@@ -902,7 +929,7 @@ var pJS = function (tag_id, params) {
                 var value =
                   p_obj -
                   (time_spent * (p_obj - bubble_param)) /
-                    pJS.interactivity.modes.bubble.duration;
+                  pJS.interactivity.modes.bubble.duration;
                 if (id == "size") p.radius_bubble = value;
                 if (id == "opacity") p.opacity_bubble = value;
               }
@@ -913,9 +940,9 @@ var pJS = function (tag_id, params) {
           } else {
             if (p_obj_bubble != undefined) {
               var value_tmp =
-                  p_obj -
-                  (time_spent * (p_obj - bubble_param)) /
-                    pJS.interactivity.modes.bubble.duration,
+                p_obj -
+                (time_spent * (p_obj - bubble_param)) /
+                pJS.interactivity.modes.bubble.duration,
                 dif = bubble_param - value_tmp;
               value = bubble_param + dif;
               if (id == "size") p.radius_bubble = value;
@@ -956,14 +983,17 @@ var pJS = function (tag_id, params) {
         dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
         dist_mouse = Math.sqrt(dx_mouse * dx_mouse + dy_mouse * dy_mouse);
 
-      var normVec = { x: dx_mouse / dist_mouse, y: dy_mouse / dist_mouse },
+      var normVec = {
+          x: dx_mouse / dist_mouse,
+          y: dy_mouse / dist_mouse
+        },
         repulseRadius = pJS.interactivity.modes.repulse.distance,
         velocity = 100,
         repulseFactor = clamp(
           (1 / repulseRadius) *
-            (-1 * Math.pow(dist_mouse / repulseRadius, 2) + 1) *
-            repulseRadius *
-            velocity,
+          (-1 * Math.pow(dist_mouse / repulseRadius, 2) + 1) *
+          repulseRadius *
+          velocity,
           0,
           50
         );
@@ -1058,8 +1088,8 @@ var pJS = function (tag_id, params) {
         var opacity_line =
           pJS.interactivity.modes.grab.line_linked.opacity -
           dist_mouse /
-            (1 / pJS.interactivity.modes.grab.line_linked.opacity) /
-            pJS.interactivity.modes.grab.distance;
+          (1 / pJS.interactivity.modes.grab.line_linked.opacity) /
+          pJS.interactivity.modes.grab.distance;
 
         if (opacity_line > 0) {
           /* style */
@@ -1478,13 +1508,12 @@ function hexToRgb(hex) {
     return r + r + g + g + b + b;
   });
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
-    ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-      }
-    : null;
+  return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16),
+    } :
+    null;
 }
 
 function clamp(number, min, max) {
@@ -1531,7 +1560,7 @@ window.particlesJS = function (tag_id, params) {
 
   /* set size canvas */
   canvas_el.style.width = "100%";
-  canvas_el.style.height = "100%";
+  canvas_el.style.height = "83%";
 
   /* append canvas */
   var canvas = document.getElementById(tag_id).appendChild(canvas_el);
