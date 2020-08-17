@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
 html,
 body,
 h1,
@@ -15,9 +16,10 @@ ul {
   letter-spacing: 2px;
   font-family: "Roboto", sans-serif;
 }
+
 #particles-js {
   height: 100%;
-  background-image: url("images/newBak.png");
+  background-color: black;
   background-size: cover;
 
   display: flex;
@@ -28,6 +30,7 @@ ul {
 #particles-js.profileImage {
   opacity: 0.4;
 }
+
 /* @keyframes example {
   from {
     background: url(images/bakground.jpg) no-repeat center center fixed;
@@ -47,17 +50,21 @@ ul {
 .particles-js-canvas-el {
   position: absolute;
 }
+
 html,
 body {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 a {
   color: red;
 }
+
 .hyperlink {
   color: red;
 }
+
 html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -77,6 +84,7 @@ header h1 {
   transform: translateY(-50%);
 }
 
+/* 
 nav {
   width: 15%;
   height: 80%;
@@ -95,11 +103,12 @@ nav li {
   margin-top: 15px;
   width: 80%;
   text-align: center;
-}
+} */
 .pInfo {
   color: #000;
 }
-nav a:link,
+
+/* nav a:link,
 a:visited {
   background-color: #000;
   color: white;
@@ -109,13 +118,13 @@ a:visited {
   display: block;
   width: 80%;
   transition: box-shadow 0.3s;
-}
+} */
 
-nav a:hover,
+/* nav a:hover,
 a:active {
   background-color: #21212c;
   box-shadow: 0 0 11px #fffa69;
-}
+} */
 
 p {
   line-height: 30px;
@@ -142,14 +151,22 @@ footer {
 input[type="text"],
 select,
 textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
   font-family: Arial;
 }
 
@@ -251,6 +268,7 @@ input[type="button"].spring {
   padding: 10px;
   font-size: 16px;
 }
+
 input[type="button"].spring:hover {
   animation: none;
 }
@@ -259,15 +277,19 @@ input[type="button"].spring:hover {
   0% {
     transform: scale(1) translateY(0);
   }
+
   10% {
     transform: scale(1.2, 0.6);
   }
+
   30% {
     transform: scale(0.8, 1.1) translateY(-30px);
   }
+
   50% {
     transform: scale(1) translateY(0);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -283,6 +305,7 @@ input[type="button"].spring:hover {
 body {
   background: #222;
 }
+
 .box {
   margin: 0 auto;
   width: 500px;
@@ -293,6 +316,7 @@ body {
   border: 1px solid #111;
   overflow: hidden;
 }
+
 b {
   display: block;
   width: 50px;
@@ -317,65 +341,81 @@ b {
   from {
     left: 0;
   }
+
   to {
     left: 95%;
   }
 }
+
 @-moz-keyframes moveX {
   from {
     left: 0;
   }
+
   to {
     left: 95%;
   }
 }
+
 @-o-keyframes moveX {
   from {
     left: 0;
   }
+
   to {
     left: 95%;
   }
 }
+
 @keyframes moveX {
   from {
     left: 0;
   }
+
   to {
     left: 95%;
   }
 }
+
 @-webkit-keyframes moveY {
   from {
     top: 0;
   }
+
   to {
     top: 95%;
   }
 }
+
 @-moz-keyframes moveY {
   from {
     top: 0;
   }
+
   to {
     top: 95%;
   }
 }
+
 @-o-keyframes moveY {
   from {
     top: 0;
   }
+
   to {
     top: 95%;
   }
 }
+
 .profileImage {
   border-radius: 50%;
 }
+
 @keyframes moveY {
   from {
     top: 0;
   }
+
   to {
     top: 95%;
   }
